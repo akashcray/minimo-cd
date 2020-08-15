@@ -1,0 +1,323 @@
+
+/* 
+           Master Stylesheet
+    ============================
+    Template Name :Minimo || HTML Template
+    Author: Akash Ovi
+    Author url: https://akashovi.com;
+    Descriptions: Minimal Blog Templete
+    Version: 1.0.0
+    Tag: blog, two colluom
+
+ */
+
+/*
+           Table of Content
+        =====================
+ 1. Typography
+ 2. Common Style
+ 3. Header
+ 4. Banner
+ 5. About
+ 6. Blog
+ 7. Newsletter
+ 8. Blog2
+ 9. Load
+ 10.Footer
+
+*/
+
+/*================================
+			TYPOGRAPHY
+==================================*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Ubuntu:wght@300&display=swap');
+
+body{
+	font-family: 'Playfair Display', serif;
+	margin: 0;
+	padding: 0;
+	color: #626262;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 35px;
+	margin: 20px 0 35px 0;
+}
+
+p{
+	font-weight: 400;
+	line-height: 24px;
+	word-spacing: 1px;
+}
+a{
+	font-family: 'Playfair Display', serif;
+	text-decoration: none;
+	color: #626262;
+}
+
+
+/*================================
+			COMMON STYLE
+==================================*/
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.sm-container{
+	width: 80%;
+	margin: 0 auto;
+}
+.catagory, .comment{;
+	display: inline-block;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #b4ad9e
+	padding-top: 15px;
+	cursor: pointer;
+}
+
+/*================================
+			HEADER START
+==================================*/
+header{
+	padding: 40px 0;
+}
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu ul li{
+	display: inline-block;
+	list-style: none;
+}
+.menu ul li a{
+	text-transform: uppercase;
+	margin: 0 60px;
+	position: relative;
+}
+.menu ul li:last-child a{
+	margin-right: 0;
+}
+.menu ul li a:before{
+	content: "";
+	width: 0;
+	height: 1.5px;
+	background: #626262;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transition: .5s;
+}
+.menu ul li:hover a:before{
+	width: 100%;
+}
+.menu ul li a:hover{
+	color: #000;
+	transition: .5s;
+}
+/*================================
+			HEADER END
+==================================*/
+
+/*================================
+			BANNER START
+==================================*/
+
+.bg-img{
+	background-image: url(../img/banner.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+/*================================
+			BANNER END
+==================================*/
+
+
+/*================================
+			ABOUT END
+==================================*/
+.about{
+	padding: 65px 0 100px;
+}
+.comment{
+	padding-top: 35px;
+}
+/*================================
+			ABOUT END
+==================================*/
+
+
+/*================================
+			BLOG START
+==================================*/
+
+.post{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 90px;
+}
+.single{
+	width: 47%;
+
+}
+.img{
+	position: relative;
+}
+.img img{
+	width: 100%;
+}
+.overlay{
+	position: absolute;
+	background: #15161ab8;
+	width: 100%;
+	height: 99%;
+	top: 0;
+	opacity: 0;
+}
+.overlay a i{
+	top: 43%;
+    position: relative;
+    left: 45%;
+    font-size: 55px;
+    color: #fffffffa;
+}
+.img:hover .overlay{
+	opacity: 1;
+	transition: .5s;
+	cursor: pointer;
+}
+
+/*================================
+			BLOG END
+==================================*/
+
+/*================================
+			NEWSLETTER START
+==================================*/
+
+.newsletter{
+	padding: 80px 0 100px;
+	background-color: #f0f0f0;
+}
+.signup{
+	text-align: center;
+}
+.signup h2{
+	padding-bottom: 60px;
+	margin: 0;
+	color: #333;
+}
+.form{
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+.form input{
+    font-size: 16px;
+    line-height: 30px;
+	width: 390px;
+    padding-right: 35px;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    box-sizing: border-box;
+}
+.form input:focus{
+	outline: 0;
+}
+.form button{
+	position: absolute;
+	background: transparent;
+    border: none;
+    right: 0;
+    top: 6px;
+    cursor: pointer;
+}
+.form button:focus{
+	outline: 0;
+}
+/*================================
+			NEWSLETTER END
+==================================*/
+
+/*================================
+			BLOG2 START
+==================================*/
+
+.blog2{
+	padding-top: 80px;
+}
+
+/*================================
+			BLOG2 END
+==================================*/
+
+/*================================
+			LOAD START
+==================================*/
+
+.load{
+	text-align: center;
+	padding: 0 0 100px;
+}
+.load button{
+	font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #626262;
+    background: transparent;
+    border: 1px solid #626262;
+    padding: 18px 40px;
+    cursor: pointer;
+}
+
+.load button:hover{
+	background: #333;
+	color: #fff;
+    transition: .4s all ease;
+}
+
+/*================================
+			LOAD END
+==================================*/
+
+/*================================
+			FOOTER START
+==================================*/
+
+footer{
+	padding: 30px 0;
+	background-color: #f0f0f0;
+}
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.terms a{
+	padding-right: 8px;
+}
+.terms a:hover{
+	text-decoration: underline;
+}
+.social ul li{
+	display: inline-block;
+	list-style: none;
+}
+.social ul li a{
+	padding: 0 8px;
+}
+.social ul li a:hover{
+	color: #333;
+	transition: .5s ease;
+}
+
+/*================================
+			FOOTER END
+==================================*/
